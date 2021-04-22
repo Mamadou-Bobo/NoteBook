@@ -1,0 +1,116 @@
+.container{
+    position: absolute;
+    top: 60px;
+
+    width: 92%;
+    height: 100%;
+    margin-left: 4%;
+}
+
+.notes{
+    width: 100%;
+    position: relative;
+    top: 5%;
+
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: flex-start;
+}
+
+.notes > div {
+    margin: 9px;
+}
+
+.note{
+    width: 272px;
+    margin-top: 50px;
+    border-radius: 15px;
+    background-color: #FC6D6D;
+}
+
+.top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    height: 40px;
+}
+
+textarea{
+    letter-spacing: 1;
+    font-size: 15px;
+    height: 65px;
+    background: none; 
+    border: none;
+    outline: none;
+    resize: none;
+    padding: 10px;
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #fff;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: #eeee;
+}
+
+.bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10px 0 10px;
+} 
+
+::placeholder{
+    color: #fff;
+    opacity: .5;
+}
+
+.title{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.title h4{
+    font-weight: 900;
+}
+
+.title h4,
+textarea,
+.bottom h4,
+.fa.fa-pencil,
+.fa.fa-trash-o{
+    color: #fff;
+}
+
+.fa.fa-star{
+    color: #ffff;
+}
+
+.fa.fa-star,
+.fa.fa-pencil,
+.fa.fa-trash-o{
+    padding: 10px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.fa.fa-star,
+.fa.fa-pencil,
+.fa.fa-trash-o{
+    cursor: pointer;
+}
+
+.remove-icon{
+    margin-left: 100px;
+}

@@ -1,0 +1,12 @@
+<div class="header">
+    <div class="header-title">
+        <a routerLink="/">NoteBook</a>
+    </div>
+    <div class="search">
+        <i class="fa fa-search" aria-hidden="true"></i>
+        <input [(ngModel)]="this.noteService.textToSearch" type="text" placeholder="Recherche">
+    </div>
+</div>
+
+<app-favorite [textToSearch]="this.noteService.textToSearch"></app-favorite>
+

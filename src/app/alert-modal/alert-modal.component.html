@@ -1,0 +1,11 @@
+<div class="dialog" [ngStyle]="{display: show ? 'block' : 'none'}">
+    <div class="overlay"></div>
+    <div class="modal-dialog">
+        <h1>Suppression <span>{{noteTitle | ellipsis:20 }}</span></h1>
+        <p>Voulez vous supprimer cette note ?</p>
+        <div class="bottom">
+            <button (click)="closeCallback()">annuler</button>
+            <button (click)="closeCallback()" (click)="deleteNote()">Supprimer</button>
+        </div>
+    </div>
+</div>

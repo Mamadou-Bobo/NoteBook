@@ -1,0 +1,21 @@
+<div class="dialog" [ngStyle]="{display: show ? 'block' : 'none'}">
+  <div class="overlay" (click)="closeCallback()"></div>
+      <div class="modal-dialog">
+          <div class="form-header">
+              <h5 class="modal-title">{{formTitle}}</h5>
+              <i (click)="closeCallback()" class="fa fa-times" aria-hidden="true"></i>
+          </div>
+          <div class="title">
+              <label for="title">Titre</label>
+              <input type="text" ngDefaultControl [(ngModel)]="titleModel">
+          </div>
+          <div class="description">
+              <label for="description">Description</label>
+              <textarea ngDefaultControl [(ngModel)]="descriptionModel"></textarea>
+          </div>
+          <div class="button">
+              <button type="button" (click)="closeCallback()">annuler</button>
+              <button type="button" (click)="button == 'Enregistrer' ? create() : update()">{{button}}</button>
+          </div>
+      </div>
+  </div>

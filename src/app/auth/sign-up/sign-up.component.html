@@ -1,0 +1,44 @@
+<div class="container">
+
+    <div class="content">
+       <div class="form-content">
+
+            <div *ngIf="formError === true" class="alert-message">
+                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                <span class="errorMessage">{{errorMessage}}</span>
+            </div>
+
+            <div class="title">
+                <h1>Inscription</h1>
+            </div>
+            
+            <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+                <div class="form">
+                    <div class="email">
+                        <label for="email">Email</label>
+                        <input id="email" type="text" placeholder="johndoe@example.com" formControlName="email">
+                    </div>
+                    <div class="password">
+                        <label for="password">Mot de passe</label>
+                        <input id="password" type="password" placeholder="6+ caractères" formControlName="password">
+                    </div>
+                    <div class="password">
+                        <label for="password">Confirmer le Mot de passe</label>
+                        <input id="confirm-password" type="password" placeholder="6+ caractères" formControlName="confirmPassword">
+                    </div>
+                    <div class="btn">
+                        <button id="button" type="submit">Créer un compte</button>
+                    </div>
+                    <h3>Vous avez déjà un compte ? <a routerLink="/auth/sign-in">Connectez vous ici</a></h3>
+                </div>
+            </form>
+
+       </div>
+
+       <div class="img-content">
+           <img src="assets/images/undraw_Access_account_re_8spm.svg" alt="">
+           <a routerLink="/">Ne pas créer un compte</a>
+       </div>
+
+    </div>
+</div>

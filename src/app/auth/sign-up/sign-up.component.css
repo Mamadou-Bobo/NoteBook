@@ -1,0 +1,138 @@
+.content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    width: 800px;
+    height: 500px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 3px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.form-content{
+
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #ededed;
+}
+
+
+.alert-message{
+    width: 80%;
+    height: 50px;
+    background-color: #c0586342;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 3px;
+}
+
+.alert-message span{
+    color: #dc3545;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.fa-exclamation-triangle{
+    color: #dc3545;
+}
+
+.form label{
+    color: #000;
+}
+
+.email,
+.password,
+.btn{
+    display: flex;
+    flex-direction: column;
+    margin: 0 25px 0 25px;
+    width: 300px;
+}
+
+.email input,
+.password input{
+    margin: 2px 0 15px 0;    
+    border: solid 2px #ccc;
+}
+
+.email input,
+.password input,
+.btn button{
+    padding: 10px;
+    outline: none;
+    border-radius: 3px;
+}
+
+
+.form input[type="text"]:focus,
+.form input[type="password"]:focus{
+    box-sizing: border-box;
+    border: 2px solid #252a3fea;
+}
+
+.btn{
+    margin-top: 20px;
+}
+
+.btn button{
+    background-color: #252A3F;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn button:hover{
+    background-color: #252a3fea;
+}
+
+.img-content{
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(#247780 70%,#6A7936);
+
+    /* background-color: #247780; */
+    /* #6A7936 */
+}
+
+.img-content img{
+    width: 50%;
+    height: 100%;
+}
+
+.img-content a{  
+    margin: 0 0 40px 0;
+
+    font-size: 18px;
+    font-weight: 900;
+
+    color: #ddd;
+}
+
+h3{
+    font-size: 16px;
+    text-align: center;
+}

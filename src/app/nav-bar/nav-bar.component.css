@@ -1,0 +1,88 @@
+.nav{
+    width: 230px;
+    height: 100%;
+    background-color: #252A3F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title h1{
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.hr hr{
+    background-color: #fff;
+    width: 70px;
+    height: 1px;
+    border-radius: 5px;
+}
+
+.fa.fa-plus-circle{
+    margin-top: 40px;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* .colors .color .circle .fa.fa-circle:nth-child(1),
+.colors .color .circle .fa.fa-circle:nth-child(2),
+.colors .color .circle .fa.fa-circle:nth-child(3),
+.colors .color .circle .fa.fa-circle:nth-child(4),
+.colors .color .circle .fa.fa-circle:nth-child(5){
+    cursor: pointer;
+} */
+/* 
+.colors .color .circle .fa.fa-circle:nth-child(1){
+    background-color: #FC6D6D;
+}
+
+.colors .color .circle .fa.fa-circle:nth-child(2),
+.note:nth-child(2){
+    background-color: #03DAC5;
+}
+
+.colors .color .circle .fa.fa-circle:nth-child(3),
+.note:nth-child(3){
+    background-color: #64B5F6;
+}
+
+.colors .color .circle .fa.fa-circle:nth-child(4),
+.note:nth-child(4){
+    background-color: #BE6DFC;
+}
+
+.colors .color .circle .fa.fa-circle:nth-child(5){
+    background-color: #F423C5;
+} */
+
+.btn{
+    margin-top: 80px;
+}
+
+.btn a{
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 43px;
+    padding: 8px;
+    background: none;
+    border: 2px solid #64B5F6;
+}
+
+ul.a{
+    list-style-type: none;
+}
+
+.username{
+    position: fixed;
+    top: 100%;
+    transform: translate(0,-80%);
+}
+
+.username h6{
+    font-size: 14px;
+    color: #fff;
+}

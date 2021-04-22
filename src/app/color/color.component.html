@@ -1,0 +1,5 @@
+<div [@colorsAnimation]="colors.length">
+    <div (click)="getColor(i)" *ngFor="let color of colors; index as i">
+        <i [ngStyle]="{'color': color.name}" class="fa fa-circle" aria-hidden="true"></i>
+    </div>
+</div>

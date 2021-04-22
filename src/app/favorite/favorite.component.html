@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="notes">
+        <div *ngFor="let note of favoriteNote | filter: this.noteService.textToSearch; index as i" [ngStyle]="{'background-color': note.bgColor }" class="note">
+            <div class="top">
+                <div class="title">
+                    <h4>{{note.title | ellipsis:30 }}</h4>
+                </div>
+                <div (click)="switchColor(i)" class="star-icon">
+                    <app-star-icon [noteIndex]="i" [iconColor]="note.iconColor"></app-star-icon>
+                </div>
+            </div>
+            <textarea
+            cols="30"
+            rows="8"
+            placeholder="Description"
+            #focus
+            >{{note.description}}</textarea>
+            <div class="bottom">
+                <h4>{{note.date}}</h4>
+                <div class="remove-icon">
+                    <i class="fa fa-trash-o" (click)="getIndex(i)" (click)="openAlertModal()" aria-hidden="true"></i>
+                </div>
+                <div class="pencil-icon">
+                    <i class="fa fa-pencil" aria-hidden="true" (click)="getData(i)" (click)="openModal()"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<app-loader *ngIf="showLoader"></app-loader>
+
+
+<app-modal
+[show]="showModal"
+[closeCallback]="openModal"
+[button]="btnText"
+[titleModel]="titleInput"
+[descriptionModel]="descriptionInput"
+[index]="noteIndex"
+[formTitle]="'Modification Note'"
+>
+</app-modal>
+
+<app-alert-modal
+[show]="showAlertModal"
+[closeCallback]="openAlertModal"
+[index]="noteId"
+[noteTitle]="noteTitle"
+[textToSearch]="textToSearch"
+>
+</app-alert-modal>

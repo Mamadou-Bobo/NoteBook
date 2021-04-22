@@ -1,0 +1,31 @@
+<div class="container">
+
+    <app-nav-bar></app-nav-bar>
+    
+    <div class="content">
+        <div class="header">
+            <div *ngIf="isAuth" class="favorite-notes">
+                <a routerLink="favorite">Favoris</a>
+                <p> : {{this.noteService.getCount()}}</p>
+            </div>
+            <div class="search">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input type="text" placeholder="Recherche" [(ngModel)]="textToSearch">
+            </div>
+        </div>
+    
+        <div class="content-title">
+            <div><h3>Notes</h3></div>
+            <div class="alert-message" #alertMmessage *ngIf="!isAuth">
+                <h1>Voulez vous sauvegarder vos notes ?</h1>
+                <a routerLink="/auth/sign-in">Oui</a>
+                <a (click)="closeAlertMessage()">Non</a>
+            </div>
+        </div>
+
+
+        <app-single-note [textToSearch]="textToSearch"></app-single-note>
+
+    </div>
+    
+</div>

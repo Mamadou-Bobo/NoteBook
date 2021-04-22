@@ -1,0 +1,35 @@
+<div class="nav">
+    <div class="title">
+        <h1>NoteBook</h1>
+    </div>
+    <div class="hr">
+        <hr>
+    </div>
+    <i (click)="isAdd == false ? changePosition('move') : changePosition('reset')" [@rotatePlus]="position" (click)="changeValue()" class="fa fa-plus-circle" aria-hidden="true"></i>
+    <div *ngIf="getValue()" class="colors">
+        <div class="color" (click)="openModal()">
+            <app-color></app-color>
+        </div>
+    </div>
+    <div class="btn">
+        <ul class="a">
+            <li routerLinkActive="active" *ngIf="!isAuth">
+                <a routerLink="/auth/sign-in">Sauvegarder</a>
+            </li>
+            <li routerLinkActive="active" *ngIf="isAuth">
+                <a (click)="signOut()">Déconnexion</a>
+            </li>
+        </ul>
+    </div>
+    <div *ngIf="isAuth" class="username">
+        <h6>{{userEmail}}</h6>
+    </div>
+</div>
+
+<app-modal
+  [show]="showModal"
+  [closeCallback]="openModal"
+  [button] = "btnText"
+  [formTitle]="'Nouvelle note'"
+>
+</app-modal>

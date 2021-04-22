@@ -1,0 +1,55 @@
+<div class="container">
+
+    <div class="left-content">
+        <div class="left-image">
+            <img src="assets/images/undraw_mobile_login_ikmv.svg">
+        </div>
+        <div class="paragraph">
+            <p>En vous connectant vous pourrez sauvegarder vos notes ainsi que les consulter à tout moment.</p>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <div class="content">
+            
+            <div *ngIf="formError === true" class="alert-message">
+                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                <span class="errorMessage">{{errorMessage}}</span>
+            </div>
+
+            <div class="title">
+                <h1>Connexion</h1>
+            </div>
+            
+            <form [formGroup]="signInForm" (ngSubmit)="onSubmit()">
+                <div class="form">
+                    <div class="email">
+                        <label for="email">Email</label>
+                        <input id="email" type="text" placeholder="johndoe@example.com" formControlName="email">
+                    </div>
+                    <div class="password">
+                        <label for="password">Mot de passe</label>
+                        <input id="password" type="password" placeholder="6+ caractères" formControlName="password">
+                    </div>
+                    <div class="btn">
+                        <button id="button" type="submit">Se connecter</button>
+                    </div>
+                    <h3>Vous n'avez pas de compte ? <a routerLink="/auth/sign-up">Créez-en un</a></h3>
+                </div>
+            </form>
+        
+        </div>
+    </div>
+    <div class="right-content">
+        <div class="paragraph">
+            <p>Vous pouvez ajouter des notes sans être authentifié. De ce fait vos notes ne serront pas sauvegardées
+                et par conséquent vous ne pourrez pas les retrouver une fois le navigateur rafraîchi.
+                <a routerLink="/">Ajouter quand même</a>
+            </p>
+        </div>
+        <div class="right-image">
+            <img src="assets/images/undraw_add_file_4gfw.svg">
+        </div>
+    </div>
+
+</div>
