@@ -19,6 +19,7 @@ export class AlertModalComponent extends FilterPipe implements OnInit{
   @Input() index;
   @Input() noteTitle: string;
   @Input() textToSearch: string;
+  @Input() isFavorite: boolean = false;
   
   isAuth: boolean;
 
@@ -43,9 +44,14 @@ export class AlertModalComponent extends FilterPipe implements OnInit{
    **/
   deleteNote(): void {
     if(this.isAuth) {
+
       let i = 0;
 
       this.notesList = this.transform(this.noteService.notesList,this.textToSearch);
+
+      if(this.isFavorite) {
+        this.notesList = this.notesList.filter(note => note.iconColor !== "#ffffff");        
+      }
 
       this.noteService.deleteNote(this.notesList[this.index].noteId);
 

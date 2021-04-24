@@ -83,9 +83,9 @@ export class FavoriteComponent extends FilterPipe implements OnInit, OnDestroy {
     this.noteTitle = this.favoriteNote[index].title;
   }
 
-  removeNote(index: number) {
-    this.noteService.deleteNote(index);
-  }
+  // removeNote(index: number) {
+  //   this.noteService.deleteNote(index);
+  // }
 
   ngOnDestroy(): void {
     this.noteSubscription.unsubscribe();
